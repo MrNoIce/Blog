@@ -5,7 +5,7 @@ module.exports = {
   shortSiteTitle: "Jake's Portfolio", // <title> ending for posts and pages
   siteDescription: "A blog dedicated to show the work of Jake Scott.",
   siteUrl: "https://jakescott.dev",
-  pathPrefix: "",
+  pathPrefix: "public/",
   siteImage: "avatar.png",
   siteLanguage: "en",
   // author
