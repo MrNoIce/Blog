@@ -71,7 +71,7 @@ class InfoBox extends React.Component {
 
     return (
       <aside
-        className={`${classes.infoBox} ${navigatorPosition ? navigatorPosition : ""} 
+        className={`${classes.infoBox} ${navigatorPosition ? navigatorPosition : ""}
         ${navigatorShape ? navigatorShape : ""}`}
       >
         {info && (

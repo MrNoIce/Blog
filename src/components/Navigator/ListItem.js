@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 import LazyLoad from "react-lazyload";
 
+// All post cards - display and styling
+
 const styles = theme => ({
   listItem: {
     margin: "0 0 .7em 0",
@@ -164,7 +166,6 @@ class ListItem extends React.Component {
                 </LazyLoad>
               </div>
             )}
-          
           <div className={classes.listItemText}>
             <h1>{post.node.frontmatter.title}</h1>
             {post.node.frontmatter.subTitle && <h2>{post.node.frontmatter.subTitle}</h2>}

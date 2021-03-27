@@ -7,28 +7,28 @@ import Main from "../components/Main";
 import Article from "../components/Main/Article";
 import PageHeader from "../components/Page/PageHeader";
 import Content from "../components/Main/Content";
-import Form from "../components/Forms/ContactForm";
+import RequestForm from "../components/Forms/RequestForm";
 import config from "../../content/meta/config";
 
 const styles = theme => ({});
 
-const Contact = () => {
+const Request = () => {
   return (
     <Main>
       <Article>
-        <PageHeader title="Contact" />
+        <PageHeader title="Request" />
         <Content>
           Feel free to contact me by email: <Obfuscate email={config.contactEmail} /> or use the
           form below.
         </Content>
-        <Form />
+        <RequestForm />
       </Article>
     </Main>
   );
 };
 
-Contact.propTypes = {
+Request.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default injectSheet(styles)(Contact);
+export default injectSheet(styles)(Request);

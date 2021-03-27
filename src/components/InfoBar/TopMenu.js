@@ -111,6 +111,16 @@ class TopMenu extends React.Component {
                         Contact
                       </MenuItem>
                     </Link>
+                    <Link to="/request/" style={{ display: "block" }}>
+                      <MenuItem
+                        onClick={e => {
+                          this.props.pageLinkOnClick(e);
+                          this.handleClose();
+                        }}
+                      >
+                        request
+                      </MenuItem>
+                    </Link>
                   </MenuList>
                 </Paper>
               </Grow>
