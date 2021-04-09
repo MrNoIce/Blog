@@ -42,11 +42,17 @@ const InfoMenu = props => {
           </Link>
         );
       })}
+      <Link to="/homeservices/" onClick={linkOnClick} className={classes.link} data-shape="closed">
+        home Services
+      </Link>
+      <Link to="/servicerequest/" onClick={linkOnClick} className={classes.link} data-shape="closed">
+        Vehicle Services
+      </Link>
       <Link to="/contact/" onClick={linkOnClick} className={classes.link} data-shape="closed">
         Contact
       </Link>
-      <Link to="/request/" onClick={linkOnClick} className={classes.link} data-shape="closed">
-        Request
+      <Link to="/blog/" onClick={linkOnClick} className={classes.link} data-shape="closed">
+        Blog
       </Link>
     </nav>
   );

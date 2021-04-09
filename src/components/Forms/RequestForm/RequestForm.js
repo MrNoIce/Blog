@@ -42,10 +42,9 @@ class RequestForm extends React.Component {
   state = {
     name: "",
     email: "",
-    message: "",
     phone: "",
     vehicle: "",
-    issues: "",
+    concerns: "",
     help: "",
     submitError: ""
   };
@@ -82,7 +81,7 @@ class RequestForm extends React.Component {
 
   render() {
     const { classes } = this.props;
-    const { email, name, phone, vehicle, issues, help, message, submitError } = this.state;
+    const { email, name, phone, vehicle, concerns, help, submitError } = this.state;
 
     return (
       <ValidatorForm
@@ -143,10 +142,10 @@ class RequestForm extends React.Component {
           className={classes.singleLineInput}
         />
         <TextValidator
-          id="specialnotes"
-          name="specialnotes"
-          label="Issues"
-          value={issues}
+          id="concerns"
+          name="concerns"
+          label="Concerns/Details"
+          value={concerns}
           onChange={this.handleChange}
           validators={["required"]}
           errorMessages={["this field is required"]}

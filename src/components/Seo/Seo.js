@@ -18,8 +18,7 @@ const Seo = props => {
   return (
     <Helmet
       htmlAttributes={{
-        lang: config.siteLanguage,
-        prefix: "og: http://ogp.me/ns#"
+        lang: config.siteLanguage
       }}
     >
       {/* General tags */}
