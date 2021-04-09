@@ -27,7 +27,7 @@ const Blog = () => {
   );
 };
 
-Request.propTypes = {
+Blog.propTypes = {
   classes: PropTypes.object.isRequired
 };
 

@@ -27,12 +27,20 @@ const queries = [
     transformer: ({ data }) => data.allMarkdownRemark.edges.map(({ node }) => node)
   }
 ];
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = 'https://www.jakescott.dev',
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env
+const isNetlifyProduction = NETLIFY_ENV === 'production'
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
 module.exports = {
   siteMetadata: {
     title: config.siteTitle,
     description: config.siteDescription,
-    siteUrl: config.siteUrl,
+    siteUrl,
     pathPrefix: config.pathPrefix,
     algolia: {
       appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : "",
@@ -101,6 +109,27 @@ module.exports = {
           `gatsby-remark-smartypants`
         ]
       }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: '*', allow: '/' , disallow: '/search' }],
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null,
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null,
+          },
+        },
+      },
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
