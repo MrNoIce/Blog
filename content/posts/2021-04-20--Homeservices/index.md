@@ -1,5 +1,5 @@
 ---
-title: Home Handyman Services
+title: Handyman Services
 subTitle: In-home handyman service
 category: "services"
 cover: IMG_2367.JPG
