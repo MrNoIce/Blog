@@ -16,8 +16,7 @@ title: Vehicle Services
  - Please provide a fully detailed write up of your vehicle ***and*** the physical space it is in
  - List any known issues, work previously done to it, and what you have done so far
  - I will travel up to 30 miles from Nashville - Any further will need to be discussed
- - I charge 250$ the first hour and 50$ per hour afterwards with a 15 minute grace period
 
 ## Please fill out the service request form below and I will get back to you in a timly manner
 
-[Service Request Form](/Request)
+[Vehicle Service Request Form](/Request)

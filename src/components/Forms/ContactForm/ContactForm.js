@@ -137,8 +137,6 @@ class ContactForm extends React.Component {
         >
           Send
         </Button>
-        <p>Does this work</p>
-
       </ValidatorForm>
     );
   }

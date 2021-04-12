@@ -11,18 +11,18 @@ import globals from "../styles/globals";
 
 import { setFontSizeIncrease, setIsWideScreen } from "../state/store";
 
-import asyncComponent from "../components/common/AsyncComponent/";
-import Loading from "../components/common/Loading/";
-import Navigator from "../components/Navigator/";
-import ActionsBar from "../components/ActionsBar/";
-import InfoBar from "../components/InfoBar/";
-import LayoutWrapper from "../components/LayoutWrapper/";
+import asyncComponent from "../components/common/AsyncComponent";
+import Loading from "../components/common/Loading";
+import Navigator from "../components/Navigator";
+import ActionsBar from "../components/ActionsBar";
+import InfoBar from "../components/InfoBar";
+import LayoutWrapper from "../components/LayoutWrapper";
 
 import { isWideScreen, timeoutThrottlerHandler } from "../utils/helpers";
 
 const InfoBox = asyncComponent(
   () =>
-    import("../components/InfoBox/")
+    import("../components/InfoBox")
       .then(module => {
         return module;
       })

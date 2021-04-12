@@ -101,6 +101,16 @@ class TopMenu extends React.Component {
                         </Link>
                       );
                     })}
+                    <Link to="/Homeservices/" style={{ display: "block" }}>
+                      <MenuItem
+                        onClick={e => {
+                          this.props.pageLinkOnClick(e);
+                          this.handleClose();
+                        }}
+                      >
+                        home services
+                      </MenuItem>
+                    </Link>
                     <Link to="/servicerequest/" style={{ display: "block" }}>
                       <MenuItem
                         onClick={e => {
@@ -109,16 +119,6 @@ class TopMenu extends React.Component {
                         }}
                       >
                         vehicle services
-                      </MenuItem>
-                    </Link>
-                    <Link to="/homeservices/" style={{ display: "block" }}>
-                      <MenuItem
-                        onClick={e => {
-                          this.props.pageLinkOnClick(e);
-                          this.handleClose();
-                        }}
-                      >
-                        home services
                       </MenuItem>
                     </Link>
                     <Link to="/contact/" style={{ display: "block" }}>

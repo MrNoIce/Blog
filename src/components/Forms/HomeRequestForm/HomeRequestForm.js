@@ -44,7 +44,6 @@ class HomeRequestForm extends React.Component {
     email: "",
     phone: "",
     servicesneeded: "",
-    help: "",
     submitError: ""
   };
 
@@ -80,7 +79,7 @@ class HomeRequestForm extends React.Component {
 
   render() {
     const { classes } = this.props;
-    const { email, name, phone, servicesneeded, help, submitError } = this.state;
+    const { email, name, phone, servicesneeded, submitError } = this.state;
 
     return (
       <ValidatorForm
@@ -131,21 +130,8 @@ class HomeRequestForm extends React.Component {
         <TextValidator
           id="servicesneeded"
           name="servicesneeded"
-          label="Services needed"
+          label="Services needed (How can I help?)"
           value={servicesneeded}
-          onChange={this.handleChange}
-          validators={["required"]}
-          errorMessages={["this field is required"]}
-          multiline
-          fullWidth
-          margin="normal"
-          className={classes.multilineInput}
-        />
-        <TextValidator
-          id="help"
-          name="help"
-          label="How can I help?"
-          value={help}
           onChange={this.handleChange}
           validators={["required"]}
           errorMessages={["this field is required"]}
