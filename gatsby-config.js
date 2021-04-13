@@ -54,6 +54,14 @@ module.exports = {
     }
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+        head: true,
+        anonymize: true,
+      }
+    },
     `gatsby-plugin-react-next`,
     {
       resolve: `gatsby-plugin-algolia`,
@@ -148,14 +156,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
-        head: true,
-        anonymize: true,
-      }
-    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
